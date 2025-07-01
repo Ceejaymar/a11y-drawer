@@ -2,12 +2,12 @@ import { useState } from "react";
 
 import Navbar from "./components/Navbar";
 import { Drawer } from "./components/Drawer";
+import A11yButton from "./components/a11yButton/A11yButton";
 
 import {
   AccessibilityProvider,
   useAccessibility,
 } from "./context/AccessibilityContext";
-import A11yButton from "./components/a11yButton/A11yButton";
 
 function MainContent() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
