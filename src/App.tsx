@@ -1,17 +1,20 @@
 import React, { useState } from "react";
-// import { Settings } from "lucide-react";
+
+import Navbar from "./components/Navbar";
 import { Drawer } from "./components/Drawer";
+
 import {
   AccessibilityProvider,
   useAccessibility,
 } from "./context/AccessibilityContext";
+import A11yButton from "./components/a11yButon/A11yButton";
 
 function MainContent() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const {
     fontSize,
     highContrast,
-    reducedMotion,
+    // reducedMotion,
     dyslexicFont,
     cursorSize,
     lineSpacing,
@@ -36,23 +39,7 @@ function MainContent() {
       }`}
     >
       {/* Header */}
-      <header
-        className={`${
-          highContrast ? "bg-black border-white border-b" : "bg-white shadow-sm"
-        }`}
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <h1
-              className={`text-xl font-semibold ${
-                highContrast ? "text-white" : "text-gray-900"
-              }`}
-            >
-              Accessibility Drawer
-            </h1>
-          </div>
-        </div>
-      </header>
+      <Navbar highContrast={highContrast} />
 
       {/* Main Content */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -101,19 +88,10 @@ function MainContent() {
       </main>
 
       {/* Accessibility Button */}
-      <button
-        onClick={() => setIsDrawerOpen(true)}
-        className={`fixed bottom-6 right-6 p-4 rounded-full shadow-lg transition-transform ${
-          reducedMotion ? "" : "hover:scale-110"
-        } ${
-          highContrast
-            ? "bg-white text-black hover:bg-gray-200"
-            : "bg-blue-600 text-white hover:bg-blue-700"
-        }`}
-        aria-label="Open accessibility settings"
-      >
-        {/* <Settings className="w-6 h-6" /> */} icon
-      </button>
+      <A11yButton
+        highContrast={highContrast}
+        setIsDrawerOpen={setIsDrawerOpen}
+      />
 
       {/* Drawer */}
       <Drawer

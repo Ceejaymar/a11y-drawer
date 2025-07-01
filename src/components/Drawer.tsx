@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-// import { X } from 'lucide-react';
+import { XCircleIcon } from "@phosphor-icons/react";
 import { useAccessibility } from "../context/AccessibilityContext";
 
 interface DrawerProps {
@@ -93,7 +93,7 @@ export function Drawer({ isOpen, onClose, children, title }: DrawerProps) {
               }`}
               aria-label="Close drawer"
             >
-              {/* <X className="w-5 h-5" /> */}X
+              <XCircleIcon size={24} />
             </button>
           </div>
 
