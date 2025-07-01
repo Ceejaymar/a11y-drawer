@@ -7,7 +7,7 @@ import {
   AccessibilityProvider,
   useAccessibility,
 } from "./context/AccessibilityContext";
-import A11yButton from "./components/a11yButon/A11yButton";
+import A11yButton from "./components/a11yButton/A11yButton";
 
 function MainContent() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
