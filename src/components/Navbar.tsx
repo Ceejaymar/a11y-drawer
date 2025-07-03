@@ -1,8 +1,8 @@
-type NavbarProps = {
-  highContrast: boolean;
-};
+import { useAccessibility } from "../context/AccessibilityContext";
 
-function Navbar({ highContrast }: NavbarProps) {
+function Navbar() {
+  const { highContrast } = useAccessibility();
+
   return (
     <nav
       className={`${

@@ -9,7 +9,7 @@ interface DrawerProps {
   title: string;
 }
 
-export function Drawer({ isOpen, onClose, children, title }: DrawerProps) {
+function Drawer({ isOpen, onClose, children, title }: DrawerProps) {
   const drawerRef = useRef<HTMLDivElement>(null);
   const { highContrast, reducedMotion } = useAccessibility();
 
@@ -104,3 +104,5 @@ export function Drawer({ isOpen, onClose, children, title }: DrawerProps) {
     </>
   );
 }
+
+export default Drawer;
