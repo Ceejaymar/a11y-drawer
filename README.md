@@ -1,69 +1,30 @@
-# React + TypeScript + Vite
+# A11Y Drawer: A Universal Accessibility Settings Component
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The A11y Drawer is a versatile, user-friendly component designed to empower website and application users with the ability to dynamically adjust multiple accessibility settings. This project aims to create a robust and highly customizable solution that enhances inclusivity by providing immediate control over common accessibility preferences directly within the user interface.
 
-Currently, two official plugins are available:
+## Available Scripts
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- `yarn dev`: Runs the development server for the web demo.
+- `yarn build`: Builds the component for production, optimizing for the best performance and creating the distributable package.
 
-## Expanding the ESLint configuration
+<!-- ## Vision & Phases
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+This project will evolve through strategic phases, culminating in a powerful, cross-platform accessibility package:
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+1.  **Phase 1: Core Web Component Development:** We'll focus on building a highly functional and customizable accessibility drawer for web applications using modern web standards. This phase includes implementing a foundational set of accessibility adjustments (like font size, contrast, dark mode, reduced motion, and cursor size) and ensuring a seamless user experience that adheres to WCAG guidelines.
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+2.  **Phase 2: Universal Web Package (NPM/Module):** Once the core component is stable, we'll package it into an easily importable and distributable library (e.g., an NPM package). This phase will prioritize clear documentation and examples for integration into various web frameworks (React, Vue, Angular, vanilla JS), along with modularity, performance, and maintainability for broad adoption.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+3.  **Phase 3: React Native Expansion:** The final phase involves developing a parallel, equally powerful package specifically tailored for React Native applications. We'll adapt core accessibility functionalities to the mobile environment, considering platform-specific capabilities and user interactions, aiming for a consistent user experience and feature set across both web and mobile platforms. -->
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Tools
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+_(This section will also be updated as the project progresses.)_
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- JavaScript/TypeScript
+- React
+- TailwindCSS
+
+---
+
+**Thank you for your interest in A11y Drawer!**
